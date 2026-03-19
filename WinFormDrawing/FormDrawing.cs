@@ -140,5 +140,14 @@ namespace WinFormDrawing
             // 복잡한 로직이 필요하지만, 일단 트랙바를 움직일 때 화면을 갱신하게만 해둘게.
             PanelDrawing.Invalidate();
         }
+
+        // Button Reset
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            points.Clear();
+            DrawingHistory.Maximum = 0;
+            DrawingHistory.Value = 0;
+            PanelDrawing.Invalidate();
+        }
     }
 }

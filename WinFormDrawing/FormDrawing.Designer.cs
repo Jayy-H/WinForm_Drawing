@@ -32,6 +32,7 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnLoad = new System.Windows.Forms.Button();
             this.DrawingHistory = new System.Windows.Forms.TrackBar();
+            this.BtnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,11 +77,23 @@
             this.DrawingHistory.TabIndex = 3;
             this.DrawingHistory.Scroll += new System.EventHandler(this.DrawingHistory_Scroll);
             // 
+            // BtnReset
+            // 
+            this.BtnReset.BackColor = System.Drawing.Color.MistyRose;
+            this.BtnReset.Location = new System.Drawing.Point(697, 12);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(91, 44);
+            this.BtnReset.TabIndex = 4;
+            this.BtnReset.Text = "Reset";
+            this.BtnReset.UseVisualStyleBackColor = false;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
             // FormDrawing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.DrawingHistory);
             this.Controls.Add(this.BtnLoad);
             this.Controls.Add(this.BtnSave);
@@ -99,6 +112,7 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnLoad;
         private System.Windows.Forms.TrackBar DrawingHistory;
+        private System.Windows.Forms.Button BtnReset;
     }
 }
 
