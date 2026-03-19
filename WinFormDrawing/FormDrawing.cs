@@ -133,12 +133,31 @@ namespace WinFormDrawing
             }
         }
 
+        // Reset 버튼 클릭 시: 리셋
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            // 1. 저장된 점(좌표) 리스트 싹 비우기
+            points.Clear();
+
+            // 2. 트랙바 초기화 (0으로 만들기)
+            DrawingHistory.Maximum = 0;
+            DrawingHistory.Value = 0;
+
+            // 3. 화면 다시 그리기 (점이 없으므로 깨끗한 하얀 캔버스가 됨)
+            PanelDrawing.Invalidate();
+        }
+
         // 트랙바 스크롤 시: 히스토리 보여주기
         private void DrawingHistory_Scroll(object sender, EventArgs e)
         {
             // 사실 이 과제의 트랙바는 "현재까지 그린 점들 중 어디까지 보여줄까?"를 정하는 거야.
             // 복잡한 로직이 필요하지만, 일단 트랙바를 움직일 때 화면을 갱신하게만 해둘게.
             PanelDrawing.Invalidate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
